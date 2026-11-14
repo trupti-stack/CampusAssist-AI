@@ -33,7 +33,7 @@ This project is developed for **MSADLB302P – Intelligent AI Systems and Agent 
 | Security | Bearer access token, `hmac.compare_digest`, request validation, rate limiting and size limits |
 | Testing | pytest, FastAPI TestClient, pytest-cov |
 | Containerization | Docker, Docker Compose |
-| Version control | Git and GitHub (to be completed and verified locally) |
+| Version control |Git and GitHub (repository initialized, feature branch created and merged, changes pushed successfully) |
 
 ## 3. System architecture
 
@@ -603,7 +603,15 @@ docker compose down
 
 ## 18. Git and GitHub workflow
 
-Git commits, branch creation, merge and GitHub push must be performed in the student's repository. They have not been completed or verified as part of the live Gemini demonstration.
+Git and GitHub version control has been completed.
+
+The project was initialized locally using Git. Six initial commits were created to organize the backend, frontend, tests, configuration, Docker files and documentation.
+
+A feature branch named `feature/submission-evidence` was created, updated with Git workflow documentation, and successfully merged into `main`.
+
+Both `main` and `feature/submission-evidence` were pushed to the GitHub repository.
+
+Repository: https://github.com/trupti-stack/CampusAssist-AI
 
 ### 18.1 Initialize and inspect Git
 
@@ -753,7 +761,7 @@ This section deliberately distinguishes observed results from tasks that still r
 - Run the final 20-request health benchmark on the Windows laptop and update `docs/PERFORMANCE_RUN.md` with those measurements.
 - Verify a live `/external-data` response from the student's network; mocked Open-Meteo tests are not proof of live connectivity.
 - Build and run the Docker container, verify its health check, and capture screenshots.
-- Complete Git commits, feature branch, merge and GitHub push; verify `.env` is not committed.
+- Git initialization, meaningful commits, feature branch creation, merge and GitHub push have been completed and verified.
 - Capture final assignment screenshots and complete the remaining documentation with measured values.
 - A public cloud deployment has not been performed or claimed.
 
