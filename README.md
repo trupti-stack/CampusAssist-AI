@@ -550,12 +550,12 @@ A previous project-preparation run recorded the following sequential `/health` m
 | Failed requests | 0 |
 | Success rate | 100.00% |
 | Error rate | 0.00% |
-| Average latency | 2.26 ms |
-| Maximum latency | 16.87 ms |
+| Average latency | 43.58 ms|
+| Maximum latency | 568.92 ms |
 | Rate-limit events | 0 |
 
-These values are retained as a preparation-environment baseline only. They are not measurements from the student's Windows laptop. Run the script on the final local setup and replace or supplement this table with the actual local result. The health benchmark measures backend liveness, not end-to-end LLM latency.
 
+The performance evaluation was conducted locally on the Windows environment using 20 sequential requests to the health endpoint. All 20 requests returned HTTP 200, achieving a 100% success rate with no failures or rate-limit events. The measured average latency was 43.58 ms, while the maximum latency was 568.92 ms. The first request took longer than subsequent requests, which may be associated with initial application or connection overhead. This test evaluates backend health-endpoint responsiveness and does not represent end-to-end AI response latency.
 ## 17. Docker containerization
 
 The repository includes a Dockerfile and Docker Compose configuration. The Docker image uses Python 3.11 slim, installs dependencies, copies the backend/frontend/data files, runs as a non-root user, exposes port 8000 and defines a `/health` container check. The Compose configuration supplies environment variables from `.env` at runtime.
